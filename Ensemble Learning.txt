@@ -1,0 +1,20 @@
+Ensemble Learning:
+
+% It is a Machine Learning technique that combines the predictions of multiple individual models (called as base models or weak learners) to produce a more robust and accurate prediction than any other model.
+
+% The idea behind Ensemble Learning is to reduce overfitting and to improve overall accuracy.
+
+% There are several ensemble methods, namely
+$Bagging (Bootstrap Aggregating).
+$Boosting
+$Stacking
+
+Bagging:
+
+% It is an ensemble learning method that redues the variance offf  statistical learning method by constructing   multiple sets of training sets and sampling  them with replacement from the original data and constructing a model from each set.
+
+% To create a bagged decision tree:-
+
+$ Resample the training dataset with replacement
+$ Train a decision tree on each bootstrap sample
+$ Make predictions for each data point by averaging the predictions of all decision trees

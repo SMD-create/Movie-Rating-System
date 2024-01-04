@@ -1,0 +1,45 @@
+Samba:
+
+sudo apt update
+
+sudo apt install samba
+
+pwd
+
+mkdir <folder_name>
+
+ls -l
+
+sudo smbpasswd -a ubuntu-x-smd
+
+sudo nano /etc/samba/smb.conf
+
+[smd_folder]
+path= /home/ubuntu-x-smd/smd_folder
+read only=yes
+valid users=ubuntu-x-smd
+
+
+sudo systemctl restart smbd
+
+(In Windows):
+In Quick Access:
+ Type \\<VM ip>\smd_folder
+
+Dialog Box: Enter credentials
+
+
+Filezilla:
+
+sudo apt update
+
+sudo apt install filezilla
+
+filezilla
+
+Give: 
+HostName: <VM ip>
+UserName: ubuntu-x-smd
+password: <password>
+port: <21>(default)
+Click Quick Connect

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/style.css">
+        <meta charset="utf8">
+        <title>My practice</title>
+    </head>
+    <body>
+        <center>
+        <div id="main">
+        <h1 id="Title">Captain Jack Sparrow</h1>
+        </center>
+        <div id="img-div">
+            <img id="image" src="https://i.pinimg.com/564x/7c/b1/ac/7cb1ac6306ed8434a62ade17aa64873b.jpg">
+            <div id="img-caption">
+                🏴‍☠️️ An artwork of Captain Jack Sparrow 🏴‍☠️️
+            </div>
+            <div id="tribute-page">
+                This is a tribute page to Johnny Depp a.k.a Jack Sparrow.
+            <a href="https://www.google.com/search?sa=X&rlz=1C1ONGR_enIN1041IN1041&hl=en&sxsrf=AJOqlzXaE2BDkmWK-V-h1F0C4GmH9vYwkg:1677224233699&q=jack+sparrow+super+artwork&tbm=isch&source=univ&fir=5gqOpwJ437C0ZM%252C63Dvho8E8kp4uM%252C_%253B5N-nIuYhQTfl6M%252Cgvy6DBPqw-np8M%252C_%253BkVDJOMWX45V_aM%252CvT2cQL6MotM8IM%252C_%253Bzqj2_11trOPI2M%252CbDy-UQ9rAYndjM%252C_%253BLXFXTdWgEdi_RM%252CVdRR5uhwp0JKAM%252C_%253B_KgCPJJ9K9BGOM%252COZVyNAMps3T6_M%252C_%253BKY_jf6XgxgyoHM%252C0gYlW6ULZbo27M%252C_%253BznGk1BHBj6f1wM%252ChkGAfCySdBpftM%252C_%253BxaXFaxBHnKeNLM%252CsLZ6kQ0WF1TRZM%252C_%253BeKqv05JMhBLAJM%252CUdMGLy7-WZkhmM%252C_&usg=AI4_-kT1j71XL4XPnPInz8lKUFzz6GzpDQ&ved=2ahUKEwjE3KGV0639AhUZ1XMBHflSAl8QjJkEegQICBAC&biw=1536&bih=746&dpr=1.25" id="tribute-link" target="_blank"> Click the link to explore more images of Jack Sparrow...</a>
+            </div>
+            <div id="tribute-video">
+                <p> A tribute video to Jack Sparrow </p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/E_JEjE-bwlQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>s

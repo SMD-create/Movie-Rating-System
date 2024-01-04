@@ -1,0 +1,97 @@
+server2.java
+
+PrintStream ps
+			= new PrintStream(s.getOutputStream());
+		BufferedReader br
+			= new BufferedReader(
+				new InputStreamReader(
+					s.getInputStream()));
+		BufferedReader kb
+			= new BufferedReader(
+				new InputStreamReader(System.in)); What are the components and their use in the above snippet?
+
+The above code snippet is in Java and it creates three objects, which are:
+
+PrintStream ps: This object is created using the constructor of the PrintStream class, which takes an OutputStream as its argument. The s.getOutputStream() method returns an OutputStream object associated with a socket s. The PrintStream object provides a set of methods to write various data types to the underlying OutputStream.
+
+BufferedReader br: This object is created using the constructor of the BufferedReader class, which takes an InputStreamReader as its argument. The s.getInputStream() method returns an InputStream object associated with a socket s. The InputStreamReader object is a bridge between InputStream and Reader. It reads bytes from the InputStream and decodes them into characters using a specified charset. The BufferedReader object provides a set of methods to read characters from the underlying Reader.
+
+BufferedReader kb: This object is also created using the constructor of the BufferedReader class, which takes an InputStreamReader as its argument. In this case, the System.in is an InputStream object that represents the standard input stream. The InputStreamReader object is created to decode the bytes read from the standard input stream into characters. The BufferedReader object provides a set of methods to read characters from the underlying Reader.
+
+Overall, these objects are used for communication between a client and server. The PrintStream object ps writes data to the output stream of a socket, while the BufferedReader objects br and kb read data from the input streams of a socket and standard input, respectively.
+
+
+
+
+10 DAKSINA SM
+Why do we use inputstreamreader as a parameter?
+
+We use InputStreamReader as a parameter in the constructors of BufferedReader and PrintStream classes because these classes work with characters rather than bytes.
+
+The InputStreamReader class is a bridge between the byte-based InputStream and character-based Reader classes. It reads bytes from the underlying input stream and converts them into characters using a specified character set. Similarly, the OutputStreamWriter class can be used as a bridge between the byte-based OutputStream and character-based Writer classes.
+
+In the case of the BufferedReader class, it reads characters from the input stream and buffers them for efficient reading. The InputStreamReader is used to decode the bytes read from the underlying InputStream into characters before they are buffered by the BufferedReader.
+
+Similarly, in the case of the PrintStream class, it writes characters to the underlying output stream. The OutputStream accepts bytes as input, and the PrintStream converts the characters to bytes using the OutputStreamWriter before they are written to the output stream.
+
+Therefore, InputStreamReader is used as a parameter in these constructors to provide a mechanism for converting bytes to characters and vice versa, allowing for efficient communication between the client and server.
+
+
+
+
+10 DAKSINA SM
+BufferedReader kb
+			= new BufferedReader(
+				new InputStreamReader(System.in)); 
+What is the use of system.in in the above code?
+
+System.in is a predefined public static field in the System class in Java that represents the standard input stream. This stream is a pre-connected input stream that is associated with the console from which the program is being run.
+
+In the above code, System.in is used as the input source for the BufferedReader object kb. The BufferedReader class reads characters from a character stream, in this case, the standard input stream represented by System.in.
+
+By using System.in as the input source for the BufferedReader, the program can read input entered by the user on the console. The readLine() method of the BufferedReader can then be used to read input entered by the user one line at a time.
+
+For example, if the user enters a line of text on the console and presses the Enter key, the readLine() method of the BufferedReader will read that line of text and return it as a string. The program can then process the input in any way that is required.
+
+Overall, using System.in as the input source allows the program to read user input from the console, which is a common way of interacting with command-line programs in Java.
+
+
+
+
+10 DAKSINA SM
+while (true) { 
+			String str, str1;
+			while ((str = br.readLine()) != null) {
+				System.out.println(str);
+				str1 = kb.readLine();
+				ps.println(str1);
+			}
+			ps.close();
+			br.close();
+			kb.close();
+			ss.close();
+			s.close();
+			System.exit(0);
+
+		} 
+what are the components and their uses in the above code?
+
+The above code is a Java program that creates a simple server that reads input from a client and echoes it back to the client. Here's a breakdown of the different components and their uses:
+
+while (true): This is an infinite loop that continuously accepts new connections from clients.
+
+String str, str1;: These two variables are used to store strings read from the client and input entered by the user.
+
+while ((str = br.readLine()) != null): This inner loop reads input from the client, line by line, until the client closes the connection. The readLine() method of the BufferedReader class is used to read a line of text from the input stream.
+
+System.out.println(str);: This line simply prints the line of text received from the client to the console.
+
+str1 = kb.readLine();: This line reads a line of text entered by the user on the console using another BufferedReader object called kb.
+
+ps.println(str1);: This line sends the input entered by the user back to the client by writing it to the output stream using the PrintStream object ps.
+
+ps.close(); br.close(); kb.close(); ss.close(); s.close();: These lines close all the input and output streams and the socket after the client has disconnected.
+
+System.exit(0);: This line exits the program with a status code of 0.
+
+Overall, this program creates a simple echo server that listens for connections from clients, reads input from the client, prints it to the console, and then sends it back to the client. The program uses a Socket object to accept connections from clients and create input and output streams for communication.

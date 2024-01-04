@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT 1</title>
+    <link rel="stylesheet" type="text/css" href="styles1.css">
+</head>
+<body>
+    <div class="header">
+        <h1>JAVASCRIPT PROGRAMS</h1>
+    </div>
+    <table>
+        <tr>
+            <td class="frame" id="frame1">
+                <h2>Select Operation</h2>
+                <ul>
+                    <li><a href="#" onclick="showFactorial(); setSelectedOperation('FACTORIAL')">FACTORIAL</a></li>
+                    <li><a href="#" onclick="showPrime(); setSelectedOperation('PRIME NUMBER')">PRIME NUMBER</a></li>
+                    <li><a href="#" onclick="showOddEven(); setSelectedOperation('ODD OR EVEN')">ODD OR EVEN</a></li>
+                    <li><a href="#" onclick="showArmstrong(); setSelectedOperation('ARMSTRONG')">ARMSTRONG</a></li>
+                </ul>
+            </td>
+            <td class="frame" id="frame2">
+                <h2>Input and Code</h2>
+                <div class="input-container">
+                    <label for="inputNumber">Enter a number:</label>
+                    <input type="number" id="inputNumber">
+                    <button onclick="executeSelectedOperation()">Execute</button>
+                </div>
+                <div class="code" id="codeOutput">
+                    <!-- Program code will be displayed here -->
+                </div>
+            </td>
+            <td class="frame" id="frame3">
+                <h2>Output</h2>
+                <div class="output" id="programOutput">
+                    <!-- Program output will be displayed here -->
+                    <p id="output"></p>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <script src="script1.js"></script>
+</body>
+</html>
