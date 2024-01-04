@@ -1,6 +1,0 @@
-In the given paragraph, "immediate memory" typically refers to the CPU's cache memory, which is a small and fast memory that is located 
-on the CPU chip itself. The cache memory stores frequently accessed data and instructions, which helps to speed up the CPU's operations.
-
-On the other hand, "auxiliary memory" refers to secondary storage devices such as hard disk drives, solid-state drives, or external storage 
-devices like USB drives. Auxiliary memory is used for long-term storage of programs and data, which can be accessed by the CPU as needed. 
-Unlike the immediate memory, auxiliary memory has a larger capacity but is slower in accessing data.
