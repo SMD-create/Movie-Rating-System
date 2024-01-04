@@ -1,3 +1,0 @@
-SPHINX SYSTEM IN MACHINE LEARNING :-
-
-The name SPHINX is an acronym for "Speech Integrated Neural Net eXchange." The system was designed to be speaker-independent, meaning that it could recognize speech from anyone, regardless of their accent or other individual characteristics.
